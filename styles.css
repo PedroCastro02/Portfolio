@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    height: 100vh;
+    background: black;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+}
+.circle {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: #0f0;
+    box-shadow: 0 0 10px #0f0,
+    0 0 20px #0f0,
+    0 0 30px #0f0,
+    0 0 50px #0f0;
+    border-radius: 50%;
+    animation: animate 5s linear forwards;
+}
+    @keyframes animate
+    {
+    0%
+    {
+    transform: translateY(0);
+    opacity: 1;
+    }
+    50%
+    {
+    opacity: 1;
+    }
+    100%
+    {
+    transform: translateY(-100vh);
+    opacity: 0;
+    }
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.5s;
+    background: linear-gradient(#0f0,transparent);
+}
+/* -----------------FIM BACKGROUND--------------------- */
+
+ /* -----------------REDES SOCIAIS--------------------- */
+ .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #333; /* Cor de fundo da barra lateral */
+    z-index: 999;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: #fff; /* Cor dos ícones */
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .divider {
+    width: 2px; /* Largura do risco vertical */
+    background-color: #fff; /* Cor do risco */
+    height: 50%; /* Metade da altura da barra lateral */
+    position: absolute;
+    top: 25%; /* Alinhado ao centro dos ícones */
+    left: 0;
+  }
+   /* -----------------FIM REDES SOCIAIS--------------------- */
+
+.central {
+
+    display: flex;
+    justify-content: center;
+    font-size: 0.87rem;
+    padding: 30px;
+    
+    
+}
+a {
+    text-decoration: none; /* Remove a decoração de link (sublinhado) */
+    color: inherit; /* Herda a cor do texto do pai (pode ser ajustada) */
+    /* Outras propriedades de estilo, se necessário */
+  }
+
+h1 {
+text-shadow: 0 0 25px rgba(251, 251, 251, 0.579);
+transition: transform 0.3s ease-in-out;
+}
+h1:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+/* -----------------LADO DIREITO DA IMAGEM--------------------- */
+.right-side {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projetos {
+    margin-right: 50px;
+    display: inline-block;
+    animation: fadeInTopRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+.contato {
+    margin-left: 50px;
+    display: inline-block;
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+    
+.Nome h1 {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #3494e6;
+    display: inline-block;
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s;
+    animation: typing-fade 7s steps(25, end) infinite;
+  }
+
+  @keyframes typing-fade {
+    0%, 50% {
+      width: 0;
+      opacity: 0.5;
+    }
+    50%, 100% {
+      width: 100%;
+      opacity: 1;
+    }
+    
+  }
+  /* -----------------FIM LADO DIREITO DA IMAGEM--------------------- */
+
+  /* -----------------IMAGEM--------------------- */
+.img {
+    display: flex;
+    align-items: center;
+}
+.ImagemPerfil {
+    width: 275px;
+    height: 275px; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.685); /* Uma leve sombra para destacar a imagem */
+    z-index: 999;
+  }
+  /* -----------------FIM IMAGEM--------------------- */
+
+
+   /* -----------------LADO ESQUERDO DA IMAGEM--------------------- */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sobre-mim {
+    margin-left: 50px;
+    display: inline-block;
+    animation: fadeInTopLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+.habilidades {
+    margin-right: 50px;
+    display: inline-block;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+.curriculo {
+    margin-left: 50px;
+    display: inline-block;
+    animation: fadeInBottomLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+
